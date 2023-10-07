@@ -1,0 +1,78 @@
+body .container
+{
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+
+body header h1
+{
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem; 
+}
+
+
+body main p
+{
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+
+
+body main .link
+{
+    text-align: center;
+}
+
+body main .linkIndex
+{
+    text-decoration: none;
+    background-color: rgb(231, 231, 231);
+    padding: 0.5rem 2rem;
+
+} 
+
+body main .fa-arrow-left
+{
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+body main .linkIndex:hover
+{
+    background-color: rgba(68, 63, 63, 0.5);
+}
+
+body main .imagens
+{
+    padding: 0.5rem;
+    text-align: center;
+}
+
+body main .imagens img
+{
+    max-width: 80%;
+} 
+
+@media (max-width: 600px)
+{
+    body .container
+    {
+        max-width: 98%;
+        margin: 1rem auto;
+        padding: 0 1rem; 
+    }
+
+    body main .imagens
+    {
+        text-align: center;
+    }
+
+    body main .imagens img
+    {
+        max-width: 96%;
+    } 
+}

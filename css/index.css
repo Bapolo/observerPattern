@@ -1,0 +1,89 @@
+body h1
+{
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+body h1 a
+{
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+body .fa-circle-info
+{
+    display: inline-block;
+    font-size: 2rem;
+    color: rgba(0, 0, 255, 0.5);
+}
+
+body .fa-circle-info:hover
+{
+    color: rgb(0, 0, 255);
+}
+
+
+body #canvas
+{
+    display: block;
+    width: 600px;
+    height: 400px;
+    max-width: 95%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+body button
+{
+    cursor: pointer;
+}
+
+body button:hover
+{
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 
+}
+
+body #btnNotificar
+{
+    display: block;
+    padding: 0.9rem;
+    margin: 0.8rem auto;
+    width: 15rem;
+    font-weight: 300;
+}
+
+body #btnCriarObservador, #btnEliminarObservador
+{
+    display: block;
+    padding: 0.5rem;
+}
+
+body #btnCriacao
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 600px)
+{
+    body button
+    {
+        border-radius: 0;
+        padding: 8rem 0;
+        border: none;
+        color: #0c0c0c;
+    }
+        body #btnCriacao
+    {
+        flex-direction: column;
+    }
+}
