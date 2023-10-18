@@ -9,19 +9,20 @@ document.addEventListener("DOMContentLoaded", () =>
 
         addObservador(observador)
         {
-           
-            this.observadores.push(observador)
+
             this.tocarEfeitoSonoro("./efeitosSonoros/efeitoCriar.mp3")
+            this.observadores.push(observador)
+            
         }
 
         removeObservador()
         {
             if (this.observadores.length > 0)
             {
-                this.observadores.pop()
-                console.log("observador removido " + this.observadores.length)
-                console.log("\n\n" + this.observadores)
                 this.tocarEfeitoSonoro("./efeitosSonoros/efeitoRemover.wav")
+                this.observadores.pop()
+               
+               
             }
             else
             {
