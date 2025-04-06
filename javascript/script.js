@@ -180,8 +180,6 @@ document.addEventListener("DOMContentLoaded", () =>
     {
                
         const observadores = objectoObservado.getObservadores()
-
-        console.log(observadores)
         
         if (observadores.length >= 0)
         {
