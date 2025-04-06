@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () =>
     function draw()
     {
         const observadores = objectoObservado.getObservadores()
-        console.log("ok")
+        
         if (observadores.length >= 0)
         {
             context.clearRect(0, 0, canvas.width, canvas.height)
