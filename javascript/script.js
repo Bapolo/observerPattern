@@ -168,19 +168,14 @@ document.addEventListener("DOMContentLoaded", () =>
     {
         objectoObservado.notificarObservadores("Corram")
     })
-
     
     const canvas = document.querySelector("#canvas")
-    const context = canvas.getContext("2d")
- 
-    
-   
+    const context = canvas.getContext("2d")   
 
     function draw()
     {
-               
         const observadores = objectoObservado.getObservadores()
-        
+        console.log("ok")
         if (observadores.length >= 0)
         {
             context.clearRect(0, 0, canvas.width, canvas.height)
