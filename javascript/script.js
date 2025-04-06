@@ -20,18 +20,12 @@ document.addEventListener("DOMContentLoaded", () =>
             if (this.observadores.length > 0)
             {
                 this.tocarEfeitoSonoro("./efeitosSonoros/efeitoRemover.wav")
-                this.observadores.pop()
-               
-               
-            }
-            else
-            {
-                console.log("Não há observadores no tabuleiro!")
+                this.observadores.pop()            
             }
             
         }
 
-        notificarObservadores(notificacao, srcDoSom)
+        notificarObservadores(notificacao)
         {
             if (this.observadores.length >  0)
             {
@@ -39,12 +33,7 @@ document.addEventListener("DOMContentLoaded", () =>
                 {
                     observador.receberNotificacaoDoObservado(notificacao)
                 })
-            }
-            else
-            {
-                console.log("Não há observador para ser notificado")
-            }
-           
+            }           
         }
 
         getObservadores()
@@ -89,9 +78,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
         receberNotificacaoDoObservado(notificacao)
         {
-            console.log("Correr!")
-            this.correr()
-            
+            this.correr()            
         }
 
         correr()
@@ -105,7 +92,8 @@ document.addEventListener("DOMContentLoaded", () =>
                     this.direction = 1
                 }
             }
-            else if (this.direction === 1)
+            
+            if (this.direction === 1)
             {
                 this.positionX += this.speed
 
@@ -114,7 +102,8 @@ document.addEventListener("DOMContentLoaded", () =>
                     this.direction = 0
                 }
             }
-            else if (this.direction === 2)
+            
+            if (this.direction === 2)
             {
                 this.positionY -= this.speed
 
@@ -123,7 +112,8 @@ document.addEventListener("DOMContentLoaded", () =>
                     this.direction = 3
                 }
             }
-            else if (this.direction === 3)
+            
+            if (this.direction === 3)
             {
                 this.positionY += this.speed
 
@@ -139,7 +129,8 @@ document.addEventListener("DOMContentLoaded", () =>
             {
                 this.positionX = 0
             }
-            else if (this.positionX > canvas.width - this.observadorQuadrado)
+            
+            if (this.positionX > canvas.width - this.observadorQuadrado)
             {
                 this.positionX = canvas.width - this.observadorQuadrado
             }
@@ -148,23 +139,18 @@ document.addEventListener("DOMContentLoaded", () =>
             {
                 this.positionY = 0
             }
-            else if (this.positionY > canvas.height - this.observadorQuadrado)
+            
+            if (this.positionY > canvas.height - this.observadorQuadrado)
             {
                 this.positionY = canvas.height - this.observadorQuadrado
             }
            
 
-        }
-
-   
- 
+        } 
 
     }
 
-   
-
     const objectoObservado = new Observado()
-
 
     document.querySelector("#btnCriarObservador").addEventListener("click", () =>
     {
@@ -211,13 +197,9 @@ document.addEventListener("DOMContentLoaded", () =>
             }
         }
         
-        window.requestAnimationFrame(draw)
-
-        
+        window.requestAnimationFrame(draw)        
     }
 
-    draw()
-
-    
+    draw()   
     
 })
